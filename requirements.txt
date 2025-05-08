@@ -1,0 +1,7 @@
+streamlit==1.24.0
+streamlit-three-d-viewer==0.2.0
+pandas==2.0.3
+pillow==9.5.0
+numpy==1.24.3
+plotly==5.15.0
+pytest==7.3.1

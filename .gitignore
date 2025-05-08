@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+.streamlit/secrets.toml
+
+# Node
+node_modules/
+.npm
+.next/
+out/
+
+# Misc
+.DS_Store
+*.log
+
+# File
+asset_gen.py

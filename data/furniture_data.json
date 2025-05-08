@@ -1,0 +1,106 @@
+{
+    "furniture": [
+      {
+        "id": 1,
+        "name": "Milano Sofa",
+        "category": "Seating",
+        "description": "Handcrafted Italian leather sofa with walnut frame and brass accents. Each piece is meticulously crafted by our artisans in Italy, using the finest full-grain leather and sustainable walnut. The contemporary profile is balanced by classic proportions, making it a timeless addition to any luxury space.",
+        "price": 8950,
+        "materials": ["Leather", "Walnut", "Brass"],
+        "dimensions": {
+          "width": 220,
+          "depth": 95,
+          "height": 85
+        },
+        "colors": ["#8B4513", "#694A38", "#241C1C", "#A67D5D", "#D8C4B8"],
+        "features": ["Premium Down Cushions", "Brass Hardware", "Hand-Stitched Detailing"],
+        "image": "assets/furniture/sofa.jpg",
+        "modelPath": "assets/models/milano_sofa.glb"
+      },
+      {
+        "id": 2,
+        "name": "Vienna Coffee Table",
+        "category": "Tables",
+        "description": "Exquisite Calacatta marble top coffee table with a sculpted bronze base. The veining in each marble slab is unique, carefully selected from the finest quarries in Italy. The cast bronze base is created using the lost-wax technique by master craftsmen.",
+        "price": 5650,
+        "materials": ["Marble", "Bronze"],
+        "dimensions": {
+          "width": 120,
+          "depth": 80,
+          "height": 45
+        },
+        "colors": ["#FFFFFF", "#F5F5F5", "#D4C4A8", "#D4AC0D", "#614E13"],
+        "features": ["Book-Matched Marble", "Acid-Etched Bronze", "Felt-Lined Base"],
+        "image": "assets/furniture/coffee_table.jpg",
+        "modelPath": "assets/models/vienna_coffee_table.glb"
+      },
+      {
+        "id": 3,
+        "name": "Oslo Dining Chair",
+        "category": "Seating",
+        "description": "Scandinavian-inspired dining chair with woven leather seat and solid oak frame. The minimalist design emphasizes clean lines and natural materials, while the hand-woven leather seat creates both comfort and visual interest.",
+        "price": 2450,
+        "materials": ["Oak", "Leather"],
+        "dimensions": {
+          "width": 50,
+          "depth": 55,
+          "height": 80
+        },
+        "colors": ["#A1887F", "#5D4037", "#D7CCC8", "#796A62", "#382E2C"],
+        "features": ["Hand-Woven Seat", "Mortise and Tenon Joinery", "Oil-Rubbed Finish"],
+        "image": "assets/furniture/chair.jpg",
+        "modelPath": "assets/models/oslo_dining_chair.glb"
+      },
+      {
+        "id": 4,
+        "name": "Manhattan Bookshelf",
+        "category": "Storage",
+        "description": "Modular bookshelf system with adjustable shelves and integrated LED lighting. The sophisticated design features hidden cable management, adjustable shelving, and smart lighting that can be controlled via app or voice commands.",
+        "price": 11200,
+        "materials": ["Walnut", "Glass", "Brass"],
+        "dimensions": {
+          "width": 180,
+          "depth": 45,
+          "height": 240
+        },
+        "colors": ["#5D4037", "#3E2723", "#8D6E63", "#D4AC0D", "#212121"],
+        "features": ["Integrated Lighting", "Smart Home Compatible", "Adjustable Shelving", "Cable Management"],
+        "image": "assets/furniture/bookshelf.jpg",
+        "modelPath": "assets/models/manhattan_bookshelf.glb"
+      },
+      {
+        "id": 5,
+        "name": "Kyoto Side Table",
+        "category": "Tables",
+        "description": "Japanese-inspired side table with intricate woodwork and a hidden compartment. Influenced by traditional Japanese craftsmanship, this piece features hand-cut joinery and the ancient technique of shou sugi ban for the accent details.",
+        "price": 3950,
+        "materials": ["Cherry Wood", "Maple"],
+        "dimensions": {
+          "width": 60,
+          "depth": 60,
+          "height": 55
+        },
+        "colors": ["#C37B57", "#92603B", "#4A3829", "#7D4E24", "#D69967"],
+        "features": ["Hidden Compartment", "Hand-Cut Joinery", "Shou Sugi Ban Accents"],
+        "image": "assets/furniture/side_table.jpg",
+        "modelPath": "assets/models/kyoto_side_table.glb"
+      },
+      {
+        "id": 6,
+        "name": "Paris Pendant Light",
+        "category": "Lighting",
+        "description": "Hand-blown glass pendant with brushed brass fittings. Each pendant is uniquely created by master glassblowers, with subtle variations that make every piece one-of-a-kind. The warm brass hardware complements the luminous glass for a timeless design.",
+        "price": 4250,
+        "materials": ["Glass", "Brass"],
+        "dimensions": {
+          "width": 45,
+          "depth": 45,
+          "height": 60
+        },
+        "colors": ["#F0F0F0", "#E0E0E0", "#D4AC0D", "#CFD8DC", "#BDBDBD"],
+        "features": ["Dimmable LED", "Hand-Blown Glass", "Adjustable Height"],
+        "image": "assets/furniture/pendant.jpg",
+        "modelPath": "assets/models/paris_pendant.glb"
+      }
+    ]
+  }
