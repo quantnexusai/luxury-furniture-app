@@ -62,54 +62,54 @@ def display_collection():
     with col3:
         price_range = st.select_slider("Price Range", options=["All", "$1k-5k", "$5k-10k", "$10k-20k", "$20k+"])
     
-    # Display furniture items in a grid
-    items_per_row = 3
-    
     # Sample furniture data
     furniture_data = [
         {
-        "id": 1,
-        "name": "Milano Sofa",
-        "description": "Handcrafted Italian leather sofa with walnut frame.",
-        "price": 8950,
-        "image": "assets/furniture/sofa.jpg"
-    },
-    {
-        "id": 2,
-        "name": "Vienna Coffee Table",
-        "description": "Marble top coffee table with sculpted bronze base.",
-        "price": 5650,
-        "image": "assets/furniture/coffee_table.jpg"
-    },
-    {
-        "id": 3,
-        "name": "Oslo Dining Chair",
-        "description": "Scandinavian-inspired dining chair with woven leather seat.",
-        "price": 2450,
-        "image": "assets/furniture/chair.jpg"
-    },
-    {
-        "id": 4,
-        "name": "Manhattan Bookshelf",
-        "description": "Modular bookshelf system with adjustable shelves.",
-        "price": 11200,
-        "image": "assets/furniture/bookshelf.jpg"
-    },
-    {
-        "id": 5,
-        "name": "Kyoto Side Table",
-        "description": "Japanese-inspired side table with intricate woodwork.",
-        "price": 3950,
-        "image": "assets/furniture/side_table.jpg"
-    },
-    {
-        "id": 6,
-        "name": "Paris Pendant Light",
-        "description": "Hand-blown glass pendant with brushed brass fittings.",
-        "price": 4250,
-        "image": "assets/furniture/pendant.jpg"
+            "id": 1,
+            "name": "Milano Sofa",
+            "description": "Handcrafted Italian leather sofa with walnut frame.",
+            "price": 8950,
+            "image": "assets/furniture/sofa.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Vienna Coffee Table",
+            "description": "Marble top coffee table with sculpted bronze base.",
+            "price": 5650,
+            "image": "assets/furniture/coffee_table.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Oslo Dining Chair",
+            "description": "Scandinavian-inspired dining chair with woven leather seat.",
+            "price": 2450,
+            "image": "assets/furniture/chair.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Manhattan Bookshelf",
+            "description": "Modular bookshelf system with adjustable shelves.",
+            "price": 11200,
+            "image": "assets/furniture/bookshelf.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Kyoto Side Table",
+            "description": "Japanese-inspired side table with intricate woodwork.",
+            "price": 3950,
+            "image": "assets/furniture/side_table.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Paris Pendant Light",
+            "description": "Hand-blown glass pendant with brushed brass fittings.",
+            "price": 4250,
+            "image": "assets/furniture/pendant.jpg"
         }
     ]
+    
+    # Define items_per_row if it's not already defined
+    items_per_row = 3
     
     # Display in grid
     for i in range(0, len(furniture_data), items_per_row):
@@ -118,7 +118,15 @@ def display_collection():
             if i + j < len(furniture_data):
                 with cols[j]:
                     item = furniture_data[i + j]
-                    st.image(item["image"], use_column_width=True)
+                    # Option 1: Just use the image with no width parameter
+                    st.image(item["image"])
+                    
+                    # Or Option 2: See if width is supported 
+                    # try:
+                    #     st.image(item["image"], width=None)  # This should fill the column
+                    # except TypeError:
+                    #     st.image(item["image"])  # Fallback to no parameter
+                    
                     st.markdown(f"### {item['name']}")
                     st.markdown(item["description"])
                     st.markdown(f"**${item['price']:,}**")
@@ -128,7 +136,7 @@ def display_collection():
                         st.button(f"View Details", key=f"view_{item['id']}")
                     with col2:
                         st.button(f"Configure", key=f"config_{item['id']}")
-
+                        
 def display_configurator():
     st.header("3D Furniture Configurator")
     
