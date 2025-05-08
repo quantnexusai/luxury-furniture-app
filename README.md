@@ -1,29 +1,26 @@
-# Luxury Furniture App
+# Luxury Furniture Studio
 
-A high-end furniture application featuring a 3D configurator for a luxury brand. The application showcases premium furniture pieces with an emphasis on elegant design, user experience, and interactive elements.
+A high-end furniture application featuring interactive 3D visualization for a luxury brand. The application showcases premium furniture pieces with an emphasis on elegant design, user experience, and interactive elements.
 
 ## Features
 
 - **Collection Gallery**: Browse through curated luxury furniture pieces
-- **3D Configurator**: Customize furniture with real-time 3D visualization
+- **3D Visualization**: View and customize furniture with interactive 3D models
 - **Custom Design Service**: Request bespoke furniture creation
-- **Design Mood Board**: Create visual collections of materials, colors, and styles
+- **Material Customization**: Explore different materials and finishes
 - **Design Consultation**: Schedule sessions with senior designers
 
 ## Tech Stack
 
-- **Frontend**: Next.js, React, Three.js, shadcn/ui
-- **Backend**: Python, Streamlit
-- **3D Rendering**: Three.js, React Three Fiber
-- **Styling**: Tailwind CSS
-- **Deployment**: GitHub Actions, Streamlit Cloud
+- **Backend & UI**: Python, Streamlit
+- **3D Visualization**: Plotly 3D
+- **Styling**: Custom CSS, Streamlit components
 
 ## Getting Started
 
 ### Prerequisites
 
 - Python 3.8+
-- Node.js and npm
 - Git
 
 ### Installation
@@ -41,33 +38,12 @@ A high-end furniture application featuring a 3D configurator for a luxury brand.
    pip install -r requirements.txt
    ```
 
-3. Set up the frontend:
+3. Run the Streamlit app:
    ```bash
-   cd frontend
-   npm install
-   ```
-
-4. Build the React components:
-   ```bash
-   npm run build
-   ```
-
-5. Run the Streamlit app:
-   ```bash
-   cd ..
    streamlit run app.py
    ```
 
 ## Development
-
-### Frontend Development
-
-To work on the frontend components:
-```bash
-cd frontend
-npm run dev
-```
-This will start the Next.js development server at http://localhost:3000.
 
 ### Streamlit Development
 
@@ -77,9 +53,20 @@ streamlit run app.py
 ```
 This will start the Streamlit server at http://localhost:8501.
 
-## Deployment
+### Adding New Furniture
 
-The app is automatically deployed to Streamlit Cloud when changes are pushed to the main branch. See the GitHub Actions workflow in `.github/workflows/deploy.yml` for details.
+To add new furniture items to the collection:
+
+1. Add images to the `assets/furniture/` directory
+2. Update the `furniture_data` list in the `display_collection()` function in `app.py`
+3. For 3D models, add new visualization logic in the `display_configurator()` function
+
+## Future Enhancements
+
+- Integration with React and Three.js for more advanced 3D configurator
+- Design mood board feature for creating visual collections
+- User accounts and saved configurations
+- AR visualization on mobile devices
 
 ## License
 
