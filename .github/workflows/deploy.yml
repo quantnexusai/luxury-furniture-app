@@ -17,15 +17,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
-        working-directory: frontend/frontend
-        run: npm install
+        run: npm ci
 
       - name: Build
-        working-directory: frontend/frontend
         run: npm run build
 
       - name: Lint
-        working-directory: frontend/frontend
         run: npm run lint || true

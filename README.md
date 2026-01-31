@@ -46,15 +46,12 @@ Your luxury furniture studio is now live.
 
 For local UI development without API keys, the app includes sample data:
 
-- Sample furniture catalog displayed throughout
-- Simulated Claude AI responses
-- Full UI functionality for testing
-
 ```bash
-cd frontend/frontend
 npm install
 npm run dev
 ```
+
+The app will be available at http://localhost:3000
 
 **Note:** Local preview is for development only. Deployment requires valid API keys.
 
@@ -76,14 +73,21 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed setup instructions.
 
 ```
 luxury-furniture-app/
-├── frontend/frontend/     # Next.js application
-│   ├── app/               # App Router pages
-│   ├── src/               # Components & utilities
-│   └── public/            # Static assets
+├── app/                   # Next.js App Router pages
+├── src/
+│   ├── components/        # React components
+│   │   ├── canvas/        # Three.js 3D components
+│   │   └── dom/           # DOM components
+│   ├── helpers/           # Utility functions
+│   └── templates/         # Page templates
+├── public/                # Static assets
+├── assets/                # Furniture images
+├── data/                  # Sample data (JSON)
 ├── supabase/
 │   └── schema.sql         # Database schema with seed data
-├── assets/                # Furniture images
-└── data/                  # Sample data (JSON)
+├── package.json
+├── next.config.js
+└── tailwind.config.js
 ```
 
 ## Contributing

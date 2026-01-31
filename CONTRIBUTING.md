@@ -20,7 +20,6 @@ Thank you for your interest in contributing! This guide will help you get set up
 
 2. **Install dependencies**
    ```bash
-   cd frontend/frontend
    npm install
    ```
 
@@ -51,7 +50,7 @@ To connect to real services:
 
 ## Code Style
 
-- **TypeScript** - Use proper types, avoid `any`
+- **JavaScript/JSX** - Follow existing patterns in the codebase
 - **Tailwind CSS** - Use utility classes, follow existing patterns
 - **Components** - Keep components focused and reusable
 - **File naming** - Use kebab-case for files, PascalCase for components
@@ -71,22 +70,25 @@ To connect to real services:
 - Keep PRs focused on a single feature or fix
 - Include a clear description of changes
 - Add screenshots for UI changes
-- Ensure no TypeScript errors (`npm run build`)
+- Ensure no build errors (`npm run build`)
 
 ## Project Structure
 
 ```
 luxury-furniture-app/
-├── frontend/frontend/          # Next.js application
-│   ├── app/                    # App Router pages
-│   ├── src/
-│   │   ├── components/         # React components
-│   │   └── lib/                # Utilities and types
-│   └── public/                 # Static assets
+├── app/                   # Next.js App Router pages
+├── src/
+│   ├── components/        # React components
+│   │   ├── canvas/        # Three.js 3D components
+│   │   └── dom/           # DOM components
+│   ├── helpers/           # Utility functions
+│   └── templates/         # Page templates
+├── public/                # Static assets
+├── assets/                # Furniture images
+├── data/                  # Sample data (JSON)
 ├── supabase/
-│   └── schema.sql              # Database schema
-├── assets/                     # Furniture images
-└── data/                       # Sample data
+│   └── schema.sql         # Database schema
+└── package.json
 ```
 
 ## Need Help?
